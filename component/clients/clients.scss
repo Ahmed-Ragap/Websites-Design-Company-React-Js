@@ -1,0 +1,249 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;  
+    -os-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+  
+  }
+  body{
+  // position: relative;
+  // height: 2000px;
+  }
+  body button{
+   outline-color: transparent;
+  }
+  
+  /*start fixed varibles*/
+  $main-color: #02d871;
+  $second-color: #333333;
+  $p-color: #ccc;
+  $h-color: #ffffff;
+  $main-font: 1.2rem;
+  
+  %main{
+    position: relative;
+    margin-top:0;
+    margin-left: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  %over{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 3, 3, 0.6);
+  }
+  %button{
+   margin: 50px auto;
+  border: 1px solid $second-color;
+  width: 120px;
+  padding: 8px;
+  background-color: transparent;
+  color: $h-color;
+  outline: none;
+  cursor: pointer;
+  
+  &:hover{
+  background-color: $main-color;
+  border-color: $second-color;
+  
+    }
+  
+  }
+  
+  @mixin transition($t){
+     -webkit-transition:all $t ease-in-out;
+     -moz-transition: all $t ease-in-out;
+     -ms-transition:all $t ease-in-out;
+     -o-transition:all $t ease-in-out;
+     transition:all $t ease-in-out;
+  }
+  
+  @mixin border-r($b){
+     -webkit-border-radius:$b;
+     -moz-border-radius:$b;
+     -ms-border-radius:$b;
+     -o-border-radius:$b;
+     border-radius:$b;
+  }
+  
+  /*this style for ffbar*/
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: $second-color; 
+     border: 1px solid $main-color;
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $main-color; 
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: $second-color;   
+    @include transition(1s);
+  }
+  
+.header_serv{
+    // min-height: 600px;
+    @extend %main;
+    background-image: url('../../img/2.jpg');
+    background-attachment: fixed;
+    .overlay{
+        @extend %over;
+
+    }
+    .container{
+        .top{
+            padding-top: 100px;
+            display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                @media(max-width:767px){
+                    display: block;
+                    
+                    
+                }
+            .top_cont{
+                // background-color: #eee;
+                width: 200px;
+                height: 100px;
+                // border-right: 4px dotted $main-color;
+                display: flex;
+                @media(max-width:767px){
+                    margin: auto;
+                }
+              
+                
+                i{
+                 font-size: 3.5rem;
+                 padding: 10px 0 0 0;
+                 color: $h-color;
+                }
+                .cont{
+                    // padding-left: 25px;
+                    padding: 10px 0 0 8px;
+                    
+                   h3,span{
+                       text-transform: capitalize;
+                       
+                   }
+                    h3{
+                        letter-spacing: 3px;
+                        font-size: $main-font + .7rem;
+                        font-weight: bold;
+                        color: $main-color;
+                    }
+                    span{
+                        display: block;
+                        color: $h-color;
+                        font-weight: 400;
+                        font-size: $main-font;
+                    }
+                }
+            }
+        }
+        .bottom_cont{
+            text-align: center;
+            img{
+                margin: auto;
+                margin-top: 100px;
+                max-width: 100%;
+                // @media(max-width:992px){
+                   
+                // }
+
+            }
+        }
+    }
+}
+.clients{
+    .container{
+        h2{
+            margin: 70px 0 59px 0;
+            &::after{
+                position: absolute;
+                content: "";
+                width: 50px;
+                height: 4px;
+                background-color: $main-color;
+                bottom: -13px;
+                left: 0;
+                @include border-r(5px);
+              }
+    
+
+        }
+        .row{
+            .col-md-4{
+                overflow: hidden;
+                .main{
+                    overflow: hidden;
+                    margin: 40px auto;
+                    box-shadow: 1px 1px 15px #eee;
+                    padding-bottom: 20px;
+                    // padding: 20px 20px;
+                    // background-image: url('../../img/api.png');
+                    background-size: cover;
+                    .overlay{
+                        @extend %over;
+                        left: 100%;
+                        @include transition(.4s);
+                        z-index: 2;
+                    }
+                    &:hover{
+                        .overlay{
+                            left: 0;
+                            background-color: rgba($second-color, .1);
+                        }
+                        // span.saide_info{
+                        //     color: $h-color;
+                        // }
+                        // h3{
+                        //     color: $h-color;
+                        // }
+                    }
+                    img{
+                        width: 100%;
+                    }
+                    h3{
+                        position: relative;
+                        @include transition(.4s);
+                        margin-top: 25px;
+                        padding-left: 20px;
+                        span{
+                            display: inline-block;
+                            color: $main-color;
+
+                        }
+                    }
+                    span.saide_info{
+                        padding-left: 20px;
+                        @include transition(.4s);
+                        color: $second-color;
+                        display: block;
+                        margin-top: 10px;
+                        font-weight: bold;
+                        font-size: $main-font;
+                        span{
+                            display: inline-block;
+                            color: $main-color;
+                            font-size: $main-font - .3rem;
+
+                        }
+                    }
+                }
+                // .main:nth-child(2n+0){
+                //     background-image: none;
+                // }
+            }
+           
+        }
+    }
+}

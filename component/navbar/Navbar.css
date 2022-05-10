@@ -1,0 +1,105 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -os-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body button {
+  outline-color: transparent;
+}
+
+/*start fixed varibles*/
+/*this style for ffbar*/
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #333333;
+  border: 1px solid #02d871;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #02d871;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.nav_main {
+  position: absolute;
+  height: 100%;
+  width: 400px;
+  z-index: 1000;
+  top: 0 !important;
+  margin-left: -400px;
+  bottom: 0 !important;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: 0.5s;
+}
+.nav_main #myNav {
+  position: sticky !important;
+  top: 50px;
+  left: 0 !important;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.nav_main #myNav span.close {
+  position: absolute;
+  font-size: 2.2rem;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  top: 20px;
+  right: -50px;
+  z-index: 1000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0;
+}
+.nav_main #myNav span.close i {
+  color: #333333;
+  transition: 2s;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+}
+.nav_main #myNav .main_content {
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  align-items: center;
+  margin: 15px auto;
+}
+.nav_main #myNav .main_content .item {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  margin: 0 auto;
+  text-align: center;
+}
+.nav_main #myNav .main_content .item:hover {
+  color: #f1f1f1;
+}
+
+/*# sourceMappingURL=Navbar.css.map */

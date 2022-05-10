@@ -1,0 +1,254 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -os-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  perspective: 400px;
+}
+
+body button {
+  outline-color: transparent;
+}
+
+/*start fixed varibles*/
+/*this style for ffbar*/
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #333333;
+  border: 1px solid #02d871;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #02d871;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+footer {
+  background-color: #333333;
+}
+footer .container {
+  text-align: left;
+}
+footer .container .row .col-md-6 h2 {
+  text-transform: capitalize;
+  color: #ffffff;
+  display: inline-block;
+  margin: 40px 0 15px 0;
+}
+footer .container .row .col-md-6 h2::after {
+  position: absolute;
+  font-size: 1.5rem;
+  content: "";
+  width: 30px;
+  height: 4px;
+  background-color: #02d871;
+  bottom: -13px;
+  left: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+footer .container .row .col-md-6 h2.logo_head {
+  padding-left: 10px !important;
+}
+footer .container .row .col-md-6 h2.logo_head::after {
+  left: 10px;
+}
+footer .container .row .col-md-6 p {
+  margin-top: 15px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+footer .container .row .col-md-6 .Working_Days {
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+footer .container .row .col-md-6 .Working_Days h3 {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+footer .container .row .col-md-6 .Working_Days span {
+  display: block;
+  margin: 5px 5px;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+footer .container .row .col-md-6 .Working_Days span:last-of-type {
+  margin-bottom: 20px;
+}
+footer .container .row .col-md-6 ul {
+  list-style-type: none;
+}
+footer .container .row .col-md-6 ul li a {
+  color: #ffffff;
+  padding: 4px 0 4px 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+  margin-top: 10px;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+footer .container .row .col-md-6 ul li:hover a {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding-left: 10px;
+}
+footer .container .row .col-md-6 .content {
+  margin-top: 30px;
+}
+footer .container .row .col-md-6 .content img {
+  height: 65px;
+  margin-top: -40px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  footer .container .row .col-md-6 .content img {
+    height: 100px;
+    margin-top: -50px;
+    width: 80px;
+  }
+}
+footer .container .row .col-md-6 .content .sup_info {
+  width: calc(100% - 100px);
+  display: inline-block;
+  padding-left: 12px;
+}
+footer .container .row .col-md-6 .content .sup_info span {
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+footer .container .row .col-md-6 .content .sup_info span.head {
+  color: #02d871;
+}
+footer .container .row .col-md-6 .content .sup_info span.head i {
+  padding-right: 7px;
+}
+footer .container .row .col-md-6 .more {
+  margin-top: 30px;
+}
+footer .container .row .col-md-6 .more img {
+  height: 80px;
+  margin: 3px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  footer .container .row .col-md-6 .more img {
+    height: 60px;
+  }
+}
+footer .container .row-2 .col-md-4 {
+  min-height: 100px;
+}
+footer .container .row-2 .col-md-4 .item {
+  display: flex;
+}
+footer .container .row-2 .col-md-4 .item i {
+  font-size: 2.1rem;
+  padding-right: 20px;
+  color: #02d871;
+  padding-top: 13px;
+}
+footer .container .row-2 .col-md-4 .item h2 {
+  text-transform: capitalize;
+  width: calc(100% - 60px);
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+footer .container .row-2 .col-md-4 .item h2 span {
+  display: block;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.copy_right {
+  background: #222222;
+}
+.copy_right .container .main-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+@media (max-width: 767px) {
+  .copy_right .container .main-cont {
+    display: block;
+  }
+}
+.copy_right .container .main-cont .left_cont h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 2;
+}
+.copy_right .container .main-cont .left_cont h3 span {
+  color: #02d871;
+  padding: 0 7px 4px 7px;
+  background-color: #ccc;
+}
+.copy_right .container .main-cont .right_cont {
+  display: inline-block;
+}
+.copy_right .container .main-cont .right_cont button {
+  width: 45px;
+  height: 45px;
+  background-color: transparent;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  outline: none;
+  border: 1px solid #ccc;
+  margin: 0 5px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.copy_right .container .main-cont .right_cont button:hover {
+  background-color: #02d871;
+  border: 1px solid #02d871;
+}
+.copy_right .container .main-cont .right_cont button i {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 20px;
+}
+.copy_right .container .main-cont .right_cont button:nth-of-type(1):hover {
+  background-color: #3b5998;
+  border: 1px solid #3b5998;
+}
+.copy_right .container .main-cont .right_cont button:nth-of-type(2):hover {
+  background-color: #24292e;
+  border: 1px solid #24292e;
+}
+.copy_right .container .main-cont .right_cont button:nth-of-type(3):hover {
+  background-color: #0a66c2;
+  border: 1px solid #0a66c2;
+}
+.copy_right .container .main-cont .right_cont button:nth-of-type(4):hover {
+  background-color: #bd081c;
+  border: 1px solid #bd081c;
+}
+
+/*# sourceMappingURL=footer.css.map */

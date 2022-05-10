@@ -1,0 +1,415 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;  
+    -os-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    perspective: 400px;
+  }
+  body{
+  // position: relative;
+  // height: 2000px;
+  }
+  body button{
+   outline-color: transparent;
+  }
+  
+  /*start fixed varibles*/
+  $main-color: #02d871;
+  $second-color: #333333;
+  $p-color: #ccc;
+  $h-color: #ffffff;
+  $main-font: 1.2rem;
+  
+  %main{
+    position: relative;
+    margin-top:0;
+    margin-left: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  %over{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 3, 3, 0.6);
+  }
+  %button{
+   margin: 50px auto;
+  border: 1px solid $second-color;
+  width: 120px;
+  padding: 8px;
+  background-color: transparent;
+  color: $h-color;
+  outline: none;
+  cursor: pointer;
+  
+  &:hover{
+  background-color: $main-color;
+  border-color: $second-color;
+  
+    }
+  
+  }
+  
+  @mixin transition($t){
+     -webkit-transition:all $t ease-in-out;
+     -moz-transition: all $t ease-in-out;
+     -ms-transition:all $t ease-in-out;
+     -o-transition:all $t ease-in-out;
+     transition:all $t ease-in-out;
+  }
+  
+  @mixin border-r($b){
+     -webkit-border-radius:$b;
+     -moz-border-radius:$b;
+     -ms-border-radius:$b;
+     -o-border-radius:$b;
+     border-radius:$b;
+  }
+  
+  /*this style for ffbar*/
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: $second-color; 
+     border: 1px solid $main-color;
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $main-color; 
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: $second-color;   
+    @include transition(1s);
+  }
+  
+
+
+.about{
+    @extend %main;
+    background-image: url('../../img/home_3.jpeg');
+    background-attachment: fixed;
+    height: 500px;
+   .overlay{
+       @extend %over;
+       background-color: rgba($main-color, .7);
+   }
+    .container{
+        text-align: center;
+        h2{
+         margin: auto;
+         width: 140px;
+         padding-top: 60px;
+         color: $h-color;
+         text-transform: capitalize;
+         &::after{
+            position: absolute;
+            content: "";
+            width: 50px;
+            height: 4px;
+            background-color: $h-color;
+            bottom: -13px;
+            left: 0;
+            @include border-r(5px);
+          }
+
+        }
+        p{
+            text-transform: capitalize;
+            margin: auto;
+            margin-top: 30px;
+            color: #eee;
+            width: 70%;
+
+        }
+       
+    }
+}
+
+
+.slider{
+    width: 100%;
+    margin-top: -200px;
+    outline: none;
+    overflow: auto;
+   
+    
+    .container{
+        outline: none;
+    .main_slide{
+        background-color: $h-color;
+        @include border-r(20px);
+        overflow: auto;
+        outline: none;
+      display: flex !important;
+        flex-direction: row;
+         justify-content: center;
+         position: relative;
+        //  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+
+
+         
+
+        .left_content{
+            @extend %main;
+            width: 50%;
+            overflow: hidden;
+            &:hover{
+                img{
+                    transform: scale(1.2);
+                    -webkit-transform: scale(1.2);
+                    -moz-transform: scale(1.2);
+                    -ms-transform: scale(1.2);
+                    -o-transform: scale(1.2);
+                    background-image: url('../../img/home_2.jpeg') !important;
+                    }
+                     }
+                     .overlay{
+                         @extend %over;
+                         z-index: 4;
+                     }
+            
+            img{
+            width: 100%;
+            @include transition(2s);
+            
+            }
+            @media(max-width:991px){
+                display: none;
+            }
+        }
+        .right_content{
+            
+          
+            padding: 30px 15px;
+            width: 50%;
+            outline: none;
+            h3{
+                margin-bottom: 20px;
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width: 100px;
+                    height: 4px;
+                    background-color: $main-color;
+                    bottom: -13px;
+                    left: 0;
+                    @include border-r(5px);
+                  }
+  
+            }
+            p{
+                color: #555;
+                text-transform: capitalize;
+            }
+            .item{
+                text-transform: capitalize;
+                margin-bottom: 10px;
+                i{
+                    padding-right: 10px;
+                    color: $main-color;
+                    font-size: $main-font + .4rem;
+
+                }
+                span{
+                    font-weight: bold;
+                    color: #777;
+                    font-size: 16px;
+                    @media (min-width:992px) and (max-width:1200px){
+                        font-size: 13px;
+                    }
+
+                }
+            }
+            @media(max-width:991px){
+                width: 100%;
+            }
+        }
+    }
+}
+}
+
+// start achievement elements style
+.achievement{
+    padding: 100px 0 50px 0;
+    .container{
+        .row{
+            .col-md-6{
+                @include transition(.2s);
+                margin-top: 40px;
+                &:hover .main{
+                    box-shadow: none;
+                    }
+                .main{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    border: 1px solid $p-color;
+                    padding: 20px 20px;
+                    background-color: $h-color;
+                    @include transition(.4s);
+                    box-shadow: 7px 7px 1px rgba($main-color, .2);
+                    img{
+                        height: 55px;
+                        @include transition(.4s);
+                    }
+                  
+                    .right_content{
+                        text-align: left;
+                        @include transition(.4s);
+                        h3{
+                            text-transform: capitalize;
+                            font-size: $main-font + .4rem;
+                            color: $main-color;
+                            span{
+                                display: block;
+                                text-transform: capitalize;
+                                font-size: $main-font;
+                                color: #555;
+                                padding-top: 5px;
+
+                            }
+                        }
+                    }
+                }
+            }
+            //add cursor style ___image___on hover to this element
+            .col-md-6 {
+                cursor: url("../../img/1.png"), auto !important;
+            }
+            .tow {
+                cursor: url("../../img/2.png"), auto !important;
+            }
+            .three {
+                cursor: url("../../img/3.png"), auto !important;
+            }
+            .four {
+                cursor: url("../../img/4.png"), auto !important;
+            }
+        }
+    }
+}
+//start about_sup_info block elements style
+
+.about_sup_info{
+    margin: 50px auto;
+    .container{
+        text-align: left;
+        .row{
+            overflow: hidden;
+            .col-md-6{
+                overflow: hidden;
+                padding-right: 0;
+                padding-left: 0;
+                .main_content{
+                    overflow: hidden;
+                   
+
+                }
+                .img_cont{
+                   @extend %main;
+                    .overlay{
+                        @extend %over; 
+                        z-index: 2;
+                        i{
+                           position: absolute;
+                           top: 50%;
+                           left: 50%;
+                           font-size: $main-font + 2rem;
+                           transform: translate(-50%, -50%);
+                           color: $h-color;
+                           -webkit-transform: translate(-50%, -50%);
+                           -moz-transform: translate(-50%, -50%);
+                           -ms-transform: translate(-50%, -50%);
+                           -o-transform: translate(-50%, -50%);
+                           @include transition(1.2s);
+                        }
+
+                    }
+                    img{
+                        max-width: 100%;
+                        @include transition(1.2s);
+
+                    }
+                   
+                    &:hover{ 
+                        // cursor: auto;
+                       // cursor: url('../../img/home.jpg'), auto;
+                      
+                        img{
+                            transform: scale(1.2);
+                            -webkit-transform: scale(2.2);
+                            -moz-transform: scale(1.2);
+                            -ms-transform: scale(1.2);
+                            -o-transform: scale(1.2);
+                            
+                             }
+                             &::after{
+                                 width: 100%;
+                                
+                             }
+                             i{
+                                 opacity: 0;
+                             }
+                            
+                    }
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        width: 0;
+                        height: 5px;
+                        background-color:$main-color;
+                        left: 0;
+                        z-index: 4;
+                        top: 0;
+                        @include transition(1.2s);
+                    }
+                }
+                .text_cont{
+                    padding: 10px 20px !important;
+                    h3{
+                        text-transform: capitalize;
+                        font-weight: bold;
+
+                    }
+                    p{
+                        text-transform: capitalize;
+                        line-height: 1.3;
+                      
+                        span{
+                            @media(max-width:991px){
+                                display: none !important;
+                            } 
+                            
+                        }
+                    }
+                    a{
+                        text-decoration: none;
+                        color: $main-color;
+                        font-size: $main-font - .2rem;
+                        text-transform: uppercase;
+                         letter-spacing: 1px;
+                         opacity: .6;
+                         i{
+                             padding-left: 5px;
+                             @include transition(.3s);
+                         }
+                         &:hover{
+                             opacity: 1;
+                             i{
+                                 padding-left: 15px;
+                             }
+                         }
+                    }
+                }
+            }
+        }
+    }
+}

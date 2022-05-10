@@ -1,0 +1,57 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -os-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  perspective: 400px;
+}
+
+body button {
+  outline-color: transparent;
+}
+
+/*start fixed varibles*/
+/*this style for ffbar*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #333333;
+  border: 1px solid #02d871;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #02d871;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+button.open {
+  position: sticky;
+  top: 35px !important;
+  left: 30px;
+  z-index: 100;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+button.open i {
+  font-size: 2.6rem;
+  color: #333333;
+}
+
+/*# sourceMappingURL=index.css.map */

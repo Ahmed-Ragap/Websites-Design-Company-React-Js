@@ -1,0 +1,190 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -os-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body button {
+  outline-color: transparent;
+}
+
+/*start fixed varibles*/
+.header_serv {
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.clients .container .row .col-md-4 .main .overlay, .header_serv .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 3, 3, 0.6);
+}
+
+/*this style for ffbar*/
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #333333;
+  border: 1px solid #02d871;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #02d871;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.header_serv {
+  background-image: url("../../img/2.jpg");
+  background-attachment: fixed;
+}
+.header_serv .container .top {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+@media (max-width: 767px) {
+  .header_serv .container .top {
+    display: block;
+  }
+}
+.header_serv .container .top .top_cont {
+  width: 200px;
+  height: 100px;
+  display: flex;
+}
+@media (max-width: 767px) {
+  .header_serv .container .top .top_cont {
+    margin: auto;
+  }
+}
+.header_serv .container .top .top_cont i {
+  font-size: 3.5rem;
+  padding: 10px 0 0 0;
+  color: #ffffff;
+}
+.header_serv .container .top .top_cont .cont {
+  padding: 10px 0 0 8px;
+}
+.header_serv .container .top .top_cont .cont h3, .header_serv .container .top .top_cont .cont span {
+  text-transform: capitalize;
+}
+.header_serv .container .top .top_cont .cont h3 {
+  letter-spacing: 3px;
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #02d871;
+}
+.header_serv .container .top .top_cont .cont span {
+  display: block;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.header_serv .container .bottom_cont {
+  text-align: center;
+}
+.header_serv .container .bottom_cont img {
+  margin: auto;
+  margin-top: 100px;
+  max-width: 100%;
+}
+
+.clients .container h2 {
+  margin: 70px 0 59px 0;
+}
+.clients .container h2::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 4px;
+  background-color: #02d871;
+  bottom: -13px;
+  left: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.clients .container .row .col-md-4 {
+  overflow: hidden;
+}
+.clients .container .row .col-md-4 .main {
+  overflow: hidden;
+  margin: 40px auto;
+  box-shadow: 1px 1px 15px #eee;
+  padding-bottom: 20px;
+  background-size: cover;
+}
+.clients .container .row .col-md-4 .main .overlay {
+  left: 100%;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  z-index: 2;
+}
+.clients .container .row .col-md-4 .main:hover .overlay {
+  left: 0;
+  background-color: rgba(51, 51, 51, 0.1);
+}
+.clients .container .row .col-md-4 .main img {
+  width: 100%;
+}
+.clients .container .row .col-md-4 .main h3 {
+  position: relative;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  margin-top: 25px;
+  padding-left: 20px;
+}
+.clients .container .row .col-md-4 .main h3 span {
+  display: inline-block;
+  color: #02d871;
+}
+.clients .container .row .col-md-4 .main span.saide_info {
+  padding-left: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  color: #333333;
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.clients .container .row .col-md-4 .main span.saide_info span {
+  display: inline-block;
+  color: #02d871;
+  font-size: 0.9rem;
+}
+
+/*# sourceMappingURL=clients.css.map */
