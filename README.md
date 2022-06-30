@@ -1,6 +1,6 @@
 # Live Demo
 
-# https://website-design-company.netlify.app/#/
+# https://website-design-company.netlify.app
 
 # Details
 
