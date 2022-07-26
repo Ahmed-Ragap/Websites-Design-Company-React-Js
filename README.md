@@ -11,7 +11,7 @@ this website is about a web design company that design and develop websites
 # 1. Html5
 # 2. Css3
 # 3. Sass
-# 4. Pootstarp
+# 4. bootstarp
 # 5. React Js {
 ##       1. Styled Component
 ##       2. Axios Api
